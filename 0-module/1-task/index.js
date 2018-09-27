@@ -1,3 +1,5 @@
+console.log( sum(1, 5) );
+
 /**
  * Power
  * @param {number} m base
@@ -5,5 +7,6 @@
  * @returns {number}
  */
 function sum (m, n) {
-
+    return m + n;
 }
+
