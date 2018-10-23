@@ -1,5 +1,5 @@
 'use strict';
-var inputData = '1, -5.8 или 10, хотя 34 + -5.3 и 73 1.555';
+var inputData = '25,-1,-234,4,   1000';
 //var inputData = 'k12j6';
 getMinMax(inputData); // ожидается [-5.8, 73]
 
@@ -9,15 +9,15 @@ getMinMax(inputData); // ожидается [-5.8, 73]
  * @returns {{min:number, max:number}}  объект
  */
 function getMinMax(str) {
-    let res = Array();
+    let result = {};
     let arr = getDigitArray(str);
     
-    res.push(Math.min.apply(null, arr));
-    res.push(Math.max.apply(null, arr));
-    
-    console.log(res);
+    result.min = Math.min.apply(null, arr);
+    result.max = Math.max.apply(null, arr);
 
-    return res;
+    console.log(result);
+
+    return result;
  }
 
  /**
